@@ -51,6 +51,14 @@ app.post('/upload', upload.single('image'), (req, res) => {
   });
 });
 
+app.get('/users', (req, res) => {
+   user = ["username"]
+
+   return res.status(200).json({
+    users: user
+   })
+})
+
 // Démarrer le serveur
 app.listen(PORT, () => {
   console.log(`Serveur en écoute sur http://localhost:${PORT}`);
